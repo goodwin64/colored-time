@@ -10,3 +10,20 @@ html, body {height: 100%;}
 	top: 50%;
 	text-align: center;
 }
+
+#colors {
+	height: 64px;
+	margin-bottom: 40px;
+	display: block;
+}
+
+.color {
+	float: left;
+	width: 33%;
+	height: 100%;
+	text-align: center;
+}
+
+.color > h1 {
+	color: #bcd;
+}
