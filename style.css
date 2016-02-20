@@ -4,7 +4,7 @@ html, body {height: 100%;}
 
 #time {
 	color: white; 
-	font: 64px Courier New; 
+	font: 96px PT Mono, Courier, Arial; 
 	height: 64px;
 	position: relative; 
 	top: 50%;
@@ -12,9 +12,12 @@ html, body {height: 100%;}
 }
 
 #colors {
+	font: 48px Helvetica Arial; 
 	height: 64px;
-	margin-bottom: 40px;
-	display: block;
+	max-width: 60%;
+	position: relative; 
+	margin: 20px auto;
+	text-align: center;
 }
 
 .color {
@@ -24,6 +27,14 @@ html, body {height: 100%;}
 	text-align: center;
 }
 
-.color > h1 {
-	color: #bcd;
+#red > p {
+	color: #dbb;
+}
+
+#green > p {
+	color: #bdb;
+}
+
+#blue > p {
+	color: #bbd;
 }

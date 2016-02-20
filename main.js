@@ -23,15 +23,8 @@ function rgbInversion(rgbString) {
   return rgbString.replace(/\d+, \d+, \d+/g, newValues.join(", "));
 }
 
-function randomStep(colors, key) {
-  if (Math.random() >= 0.5) {
-    colors[key]++;
-  } else {
-    colors[key]--;
-  }
-}
-
-function randomStepUp(colors, key, percents, step) {
+function randomStepUp(colors, key, percents) {
+  percents = percents == undefined ? 50 : percents;
   if (Math.random() * 100 <= percents) {
     colors[key]++;
   } else {
@@ -48,8 +41,10 @@ function changeValues(colors) {
     colors[activeName]--;
   else if (activeValue == colors[activeName + "Min"])
     colors[activeName]++;
-  else
-    randomStep(colors, activeName)
+  else {
+    var chanceToIncrement = document.querySelector("#" + activeName + " > input").value;
+    randomStepUp(colors, activeName, chanceToIncrement * 10);
+  }
 
   //return colors;
 }
